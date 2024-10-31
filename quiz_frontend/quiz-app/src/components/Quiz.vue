@@ -1,4 +1,8 @@
 <template>
+  <div class="bg-gradient-to-r from-yellow-500 to-black text-white p-4  mt-0">
+    <h1 class="text-center">Вопросы</h1>
+   
+  
  <div class="top-80">
   
   <form @submit.prevent="submitQuiz">
@@ -20,7 +24,7 @@
     <h2>Your Score: {{ result.score }}/{{ result.total }}</h2>
   </div>
 </div>
-
+</div>
 </template>
 
 <script>

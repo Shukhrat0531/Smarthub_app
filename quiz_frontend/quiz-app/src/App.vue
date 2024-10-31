@@ -4,14 +4,12 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div>
-    <header class="bg-yellow-400  py-4 shadow-md">
+   <header class="bg-yellow-400  py-4 shadow-md fixed w-full z-40">
   <div class="wrapper max-w-7xl mx-auto px-6">
     <nav class="flex items-center justify-between">
-      <!-- Логотип или название -->
       <div class="text-lg font-semibold">
         <RouterLink to="/" class="hover:text-blue-300">SH</RouterLink>
       </div>
-      <!-- Ссылки навигации -->
       <div class="space-x-6">
         <RouterLink to="/" class="hover:text-red-900 transition duration-200">Сдать тест</RouterLink>
         <RouterLink to="/about" class="hover:text-red-900 transition duration-200">Оставить заявку </RouterLink>
@@ -28,3 +26,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <style scoped>
 
 </style>
+
+<!-- 
+
+ -->
