@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'quiz',
-    'rest_framework','corsheaders'
+    'rest_framework',
+    'corsheaders'
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
@@ -128,3 +129,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+import os
+
+# URL для доступа к медиафайлам
+MEDIA_URL = '/media/'
+
+# Путь на сервере для хранения медиафайлов
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# AUTH_USER_MODEL = 'quiz.User'

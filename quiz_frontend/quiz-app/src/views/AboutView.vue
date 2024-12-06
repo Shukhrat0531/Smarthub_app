@@ -63,7 +63,7 @@ export default {
 </script>
 
 <template>
- <div class="about max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md">
+ <div class="about max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md mt-16">
   <form @submit.prevent="submitOrder" class="space-y-4">
     <div>
       <label for="name_students" class="block text-gray-700 font-medium mb-2">Имя Студента</label>

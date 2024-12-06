@@ -71,3 +71,40 @@ class LessonListAPIView(APIView):
         lessons = Lesson.objects.all()
         serializer = LessonSerializer(lessons, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+# Главная страница с категориями
+class CategoryListView(APIView):
+    def get(self, request):
+        categories = CategoryCourse.objects.all()
+        serializer = CategoryCourseListSerializer(categories, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+# Страница конкретной категории с курсами
+class CategoryDetailView(APIView):
+    def get(self, request, pk):
+        try:
+            category = CategoryCourse.objects.get(pk=pk)
+        except CategoryCourse.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        
+        serializer = CategoryCourseDetailSerializer(category)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class NewKnowlegeView(APIView):
+    def get(self,request):
+        newKnowlege =  NewKnowlege.objects.all()
+        serializer =  NewKnowlegeSerializer(newKnowlege,many=True)
+        
+        return Response(serializer.data,status=status.HTTP_200_OK)
+
+#Регестарция ползавателей
+class RegestrationAPIView(APIView):
+    def post(self, request):
+        serializer = RegistrationSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save() 
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        print("Ошибки:", serializer.errors)  # Вывод ошибок в консоль
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

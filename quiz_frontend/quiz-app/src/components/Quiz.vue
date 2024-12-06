@@ -1,10 +1,9 @@
 <template>
-  <div class="bg-gradient-to-r from-yellow-500 to-black text-white p-4  mt-0">
-    <h1 class="text-center">Вопросы</h1>
+  <div class="bg-yellow-300 text-black p-4  mt-0 pt-20">
+    <h1 class="text-center ">Вопросы</h1>
    
   
  <div class="top-80">
-  
   <form @submit.prevent="submitQuiz">
     <ol type="1">
       <li v-for="(question, index) in questions" :key="question.id" class="mt-4">

@@ -6,12 +6,11 @@
       <p class="text-center">Поздравляем! <br>Ваш уровен равен <span class="bg-green-500 text-white">Pre-intermadite</span>!</p>
     </div>
     <div v-else>
-      <p></p>
+      <p>Вам надо начать с алфавита </p>
     </div><br>
     <router-link class="text-blue-500 text-center" to="/">Вернуться к главной страницу</router-link>
   </div>
 </template>
-
 <script>
 export default {
   computed: {

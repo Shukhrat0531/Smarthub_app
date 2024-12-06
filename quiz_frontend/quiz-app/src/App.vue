@@ -1,10 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Header from './components/Header.vue';
 </script>
 
 <template>
   <div>
-   <header class="bg-yellow-400  py-4 shadow-md fixed w-full z-40">
+   <!-- <header class="bg-yellow-400  py-4 shadow-md fixed w-full z-40">
   <div class="wrapper max-w-7xl mx-auto px-6">
     <nav class="flex items-center justify-between">
       <div class="text-lg font-semibold">
@@ -16,9 +17,9 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
     </nav>
   </div>
-</header>
+</header> -->
 
-
+<Header></Header>
   <RouterView />
   </div>
 </template>

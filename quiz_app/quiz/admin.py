@@ -1,5 +1,8 @@
 from django.contrib import admin
-from .models import Question, Choice,OrderLesson,Ticher,Lesson
+from .models import *
+# from .models import User  # Импортируйте вашу кастомную модель User
+
+# admin.site.register(User)
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
@@ -19,3 +22,6 @@ class OrderLessonAdmin(admin.ModelAdmin):
     ordering = ('-id',)
 
 admin.site.register(OrderLesson, OrderLessonAdmin)
+admin.site.register(CategoryCourse)
+admin.site.register(Course)
+admin.site.register(NewKnowlege)
